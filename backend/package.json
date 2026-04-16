@@ -1,0 +1,40 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for Sporty Urban E-commerce",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run server",
+    "start:prod": "node server.js",
+    "server": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'frontend/*'\" \"npm run frontend\"",
+    "frontend": "cd ../frontend && npm run start",
+    "seed": "node utils/seedLocalDB.js",
+    "install": "cd ../frontend && npm install",
+    "oldbuild": "cd ../frontend && npm run build",
+    "build": "npm install --prefix ./frontend && npm run build --prefix ./frontend && npm install && npm run seed",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cleanModPak": "rm -rf node_modules package-lock.json",
+    "seedUserDb": "node data/seedUsers.js",
+    "seedProductDb": "node data/seedData.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.3.0",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "stripe": "^12.18.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
