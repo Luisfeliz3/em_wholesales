@@ -22,7 +22,7 @@ const corsOptions = {
   origin: [
     'http://localhost:3000/api',
      'http://localhost:3001',
-    'https://sporty-urban-ecommerce.onrender.com',
+    'https://em-wholesales.onrender.com/',
      // Your frontend Render URL
     process.env.CLIENT_URL
   ].filter(Boolean),
