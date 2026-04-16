@@ -39,6 +39,7 @@ const getStripePromise = () => {
   return stripePromise;
 };
 
+
 // Component for new card payment
 const NewCardPaymentForm = ({ order, onSuccess, onClose, clientSecret, setPaymentComplete, setError }) => {
   const stripe = useStripe();
@@ -116,6 +117,15 @@ const handleSubmit = async (event) => {
     setLoading(false);
   }
 };
+
+useEffect(() => {
+  // Check if Stripe.js is loaded
+  if (typeof window !== 'undefined' && !window.Stripe) {
+    console.log('Stripe.js not loaded yet');
+    const script = document.querySelector('script[src="https://js.stripe.com/v3/"]');
+    console.log('Stripe script tag exists:', !!script);
+  }
+}, []);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -413,8 +423,8 @@ const StripePayment = ({ open, onClose, order, onSuccess }) => {
   };
 
   const options = {
-    clientSecret,
-    appearance,
+    clientSecret : clientSecret,
+    appearance : appearance,
     loader: 'auto',
     wallets: { applePay: 'auto', googlePay: 'auto' },
   };
