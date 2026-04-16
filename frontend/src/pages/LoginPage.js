@@ -66,7 +66,7 @@ const LoginPage = () => {
   // Test credentials for easy testing
   const fillTestCredentials = () => {
     setFormData({
-      email: 'john@example.com',
+      email: 'admin@example.com',
       password: '123456'
     });
   };

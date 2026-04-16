@@ -114,7 +114,7 @@ useEffect(() => {
     <AppBar position="sticky" sx={{ bgcolor: "secondary.main" }}>
       <Container maxWidth="xl">
         <Toolbar>
-          
+
           {/* <SportsBasketball sx={{ mr: 2 }} /> */}
           <Typography
             variant="h6"
@@ -210,7 +210,7 @@ useEffect(() => {
                 </Menu>
               </>
             ) : (
-              <Button color="inherit" component={Link} to="/login">
+              <Button color="inherit" component={Link} to="/login" sx={{ color: '#ffffff' }}>
                 Login
               </Button>
             )}
