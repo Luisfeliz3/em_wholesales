@@ -114,7 +114,8 @@ useEffect(() => {
     <AppBar position="sticky" sx={{ bgcolor: "secondary.main" }}>
       <Container maxWidth="xl">
         <Toolbar>
-          <SportsBasketball sx={{ mr: 2 }} />
+          
+          {/* <SportsBasketball sx={{ mr: 2 }} /> */}
           <Typography
             variant="h6"
             component={Link}
@@ -122,14 +123,14 @@ useEffect(() => {
             sx={{
               flexGrow: 1,
               textDecoration: "none",
-              color: "inherit",
+              color: "white",
               fontWeight: 700,
             }}
           >
             EM WHOLESALES
           </Typography>
  
-          <Button color="inherit" component={Link} to="/products">
+          <Button color="inherit" component={Link} to="/products" sx={{ color: '#ffffff' }}>
             Shop All
           </Button>
           
@@ -145,17 +146,18 @@ useEffect(() => {
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <IconButton color="inherit" component={Link} to="/cart">
-              <Badge badgeContent={cartItemsCount} color="primary">
+              <Badge badgeContent={cartItemsCount} color="primary" sx={{ color: '#ffffff' }}>
                 <ShoppingCart />
               </Badge>
             </IconButton>
 
             {userInfo ? (
               <>
-                <IconButton color="inherit" onClick={handleProfileMenuOpen}>
+                <IconButton color="inherit" onClick={handleProfileMenuOpen} sx={{ color: '#ffffff' }}>
                   <Person />
                 </IconButton>
                 <Menu
+                
                   anchorEl={anchorEl}
                   open={Boolean(anchorEl)}
                   onClose={handleMenuClose}
@@ -172,6 +174,7 @@ useEffect(() => {
                     onClick={handleMenuClose} 
                     component={Link} 
                     to="/profile"
+                    
                   >
                     <Person fontSize="small" sx={{ mr: 1 }} />
                     My Profile

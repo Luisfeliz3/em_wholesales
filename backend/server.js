@@ -136,7 +136,9 @@ app.get('/api/test-upload', (req, res) => {
 console.log('GCS Bucket:', process.env.GCS_BUCKET_NAME);
 console.log('GCS Key File:', process.env.GOOGLE_CLOUD_KEY_FILE);
 
-
+// Check that the key is loading properly - add this console log temporarily
+console.log('Stripe PK exists:', !!process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+console.log('Stripe PK starts with pk_:', process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY?.startsWith('pk_'));
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
