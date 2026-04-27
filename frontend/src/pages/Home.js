@@ -46,7 +46,7 @@ const HomePage = () => {
                 EM WHOLESALES
               </Typography>
               <Typography variant="h5" gutterBottom sx={{ mb: 3, opacity: 0.9 }}>
-                Performance Meets Street Style
+                Detergents, Grocery, Health Care and more Wholesale Products
               </Typography>
               <Typography variant="body1" sx={{ mb: 4, opacity: 0.8 }}>
                 Discover our wholesale selection of detergents, home care products, toiletries, and food. 
