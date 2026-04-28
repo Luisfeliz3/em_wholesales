@@ -24,6 +24,7 @@ const corsOptions = {
      'http://localhost:3001',
     'https://em-wholesales.onrender.com/',
     'http://em-wholesales-frontend.s3-website-us-east-1.amazonaws.com/',
+    'http://98.84.104.122/:3000/api',
      // Your frontend Render URL
     process.env.CLIENT_URL
   ].filter(Boolean),
