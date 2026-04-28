@@ -23,6 +23,7 @@ const corsOptions = {
     'http://localhost:3000/api',
      'http://localhost:3001',
     'https://em-wholesales.onrender.com/',
+    'http://em-wholesales-frontend.s3-website-us-east-1.amazonaws.com/',
      // Your frontend Render URL
     process.env.CLIENT_URL
   ].filter(Boolean),
@@ -125,7 +126,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT ;
 
 // Add this to your server.js temporarily
 app.get('/api/test-upload', (req, res) => {

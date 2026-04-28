@@ -1,7 +1,7 @@
 const { Storage } = require('@google-cloud/storage');
 const path = require('path');
 
-// Check if required environment variables exist
+// Check if required environment vars exist
 if (!process.env.GCS_BUCKET_NAME) {
   console.error('ERROR: GCS_BUCKET_NAME environment variable is not set');
 }
